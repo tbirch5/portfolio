@@ -6,9 +6,7 @@ This site reflects my passion for tech, storytelling through software, and solvi
 
 ## 🌍 Live Site Deployed at: 
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/YOUR_NETLIFY_BADGE_ID/deploy-status)](https://app.netlify.com/sites/YOUR-SITE-NAME/deploys)
-
-Live at: [https://YOUR-SITE-NAME.netlify.app](https://YOUR-SITE-NAME.netlify.app)
+[https://tedra.netlify.app/](https://tedra.netlify.app/)
 
 ![Screenshot](public/screenshots/preview-home.png)
 
