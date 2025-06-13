@@ -1,5 +1,5 @@
 import React from 'react';
-import { blogPosts } from '../data/blogposts';
+import {blogPosts} from '../data/blogPosts';
 import { Link } from 'react-router-dom';
 
 export default function BlogPage() {

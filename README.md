@@ -1,8 +1,14 @@
-# 🌌 Tedra — Personal Portfolio Website
+# 🌌 Tedra's — Personal Portfolio Website
 
-Welcome to my personal portfolio website! This frontend project is built to showcase my skills as a full-stack developer and machine learning enthusiast, with a creative UI and backend django integrations.
+Welcome to my personal portfolio website! This frontend project is built to showcase my skills as a full-stack developer and machine learning enthusiast, with a creative UI, backend django integrations and some of my recent models.
 
 This site reflects my passion for tech, storytelling through software, and solving real problems. Thanks for visiting!
+
+## 🌍 Live Site Deployed at: 
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/YOUR_NETLIFY_BADGE_ID/deploy-status)](https://app.netlify.com/sites/YOUR-SITE-NAME/deploys)
+
+Live at: [https://YOUR-SITE-NAME.netlify.app](https://YOUR-SITE-NAME.netlify.app)
 
 ![Screenshot](public/screenshots/preview-home.png)
 
