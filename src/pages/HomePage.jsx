@@ -55,7 +55,7 @@ export default function HomePage() {
         <Navbar />
         <Toast />
 
-        <div className="min-h-screen bg-white/60 dark:bg-black/10 text-gray-900 dark:text-white transition-colors duration-300 backdrop-blur-sm">
+        <div className="min-h-screen bg-white dark:bg-[#0f0f12] text-gray-900 dark:text-gray-100 transition-colors duration-300">
             {/* Hero Section */}
             {/* See through section included to allow matrix exposure */}
             <section className="relative z-10 text-center px-6 py-24 min-h-[80vh] flex flex-col justify-center items-center bg-gradient-to-b from-white/5 via-white/0 to-white/5 dark:from-black/5 dark:via-black/0 dark:to-black/5 backdrop-blur-sm">

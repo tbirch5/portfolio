@@ -88,7 +88,7 @@ export default function ProjectCarousel() {
           >
             <div className="bg-white dark:bg-gray-900/60 backdrop-blur-md 
                   hover:shadow-lg
-                  rounded-2xl p-6 border border-indigo-700 text-gray-800 dark:text-gray-200 h-full">
+                  rounded-2xl p-6 border border-indigo-300 text-gray-800 dark:text-gray-200 h-full">
             <div className="flex flex-col md:flex-row gap-4 h-full">
               {/* Left: Image */}
               {project.image && (
