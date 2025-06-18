@@ -1,3 +1,4 @@
+{/*
 import React from 'react';
 
 const badges = [
@@ -26,3 +27,4 @@ export default function TechBadges() {
     </div>
   );
 }
+  */}

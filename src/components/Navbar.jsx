@@ -43,15 +43,16 @@ const toggleMenu = () => {
 
 return (
     <>
-        <nav className="sticky top-0 z-50 flex justify-between items-center px-6 py-4 bg-white/5 dark:bg-black/5 backdrop-blur-sm backdrop-saturate-150 shadow-sm border-b border-white/10 dark:border-white/10">
-            <div className="text-lg font-bold text-indigo-400">Tedra</div>
-
+        <nav className="sticky top-0 z-50 flex justify-between items-center px-6 py-4 bg-white/5 dark:bg-black/20 backdrop-blur-sm backdrop-saturate-150 shadow-sm border-b border-white/10 dark:border-white/10">
+            <div className="text-lg font-bold text-indigo-500 dark:text-indigo-300 font-mono flex items-center animate-fade-in-slow">
+                Hello, world!<span className="ml-1 h-5 w-1.5 bg-indigo-500 dark:bg-indigo-300 animate-blink"></span>
+            </div>
             {/* Desktop Nav */}
             <div className="hidden md:flex space-x-6 text-sm">
-                <a href="/Whoop" className="relative group text-gray-500 px-3 py-1 rounded hover:bg-indigo-500/20 transition">Whoop ML</a>
-                <a href="#projects" className="relative group text-gray-500 px-3 py-1 rounded hover:bg-indigo-500/20 transition">Projects</a>
-                <a href="#about" className="relative group text-gray-500 px-3 py-1 rounded hover:bg-indigo-500/20 transition">About</a>
-                <a href="#contact" className="relative group text-gray-500 px-3 py-1 rounded hover:bg-indigo-500/20 transition">Contact</a>
+                <a href="/Whoop" className="relative group text-gray-500 dark:text-gray-100 px-3 py-1 rounded hover:bg-indigo-500/20 transition">Whoop ML</a>
+                <a href="#projects" className="relative group text-gray-500 dark:text-gray-100 px-3 py-1 rounded hover:bg-indigo-500/20 transition">Projects</a>
+                <a href="#about" className="relative group text-gray-500 dark:text-gray-100 px-3 py-1 rounded hover:bg-indigo-500/20 transition">About</a>
+                <a href="#contact" className="relative group text-gray-500 dark:text-gray-100 px-3 py-1 rounded hover:bg-indigo-500/20 transition">Contact</a>
                 <a href="/Tedra_Resume.pdf" className="bg-indigo-500 text-white px-3 py-1 rounded hover:bg-indigo-600 transition">Resume</a>
                 <button
                     onClick={toggleTheme}
@@ -104,14 +105,14 @@ return (
         </nav>
 
         {/* Mobile Nav Dropdown */}
-        <div className={`md:hidden overflow-hidden px-6 py-4 space-y-4 bg-white/90 dark:bg-black/90 backdrop-blur-md shadow-md transform transition-all duration-300 ${
+        <div className={`md:hidden overflow-hidden px-6 py-4 space-y-4 bg-white/90 dark:bg-black/30 backdrop-blur-md shadow-md transform transition-all duration-300 ${
             menuOpen ? 'max-h-96 opacity-100 scale-y-100' : 'max-h-0 opacity-0 scale-95'
-        } origin-top`}>
-                <a href="/Whoop" className="block text-gray-700 dark:text-gray-200 hover:bg-indigo-500/20 transition">Whoop ML</a>
-                <a href="#projects" className="block text-gray-700 dark:text-gray-200 hover:bg-indigo-500/20 transition">Projects</a>
-                <a href="#about" className="block text-gray-700 dark:text-gray-200 hover:bg-indigo-500/20 transition">About</a>
-                <a href="#contact" className="block text-gray-700 dark:text-gray-200 hover:bg-indigo-500/20 transition">Contact</a>
-                <a href="/Tedra_Resume.pdf" className="block text-indigo-500 font-semibold">Resume</a>
+        } origin-top flex flex-col gap-2`} style={{ zIndex: 999 }}>
+                <a href="/Whoop" className="self-start inline-block px-2 py-1 text-gray-700 dark:text-gray-200 hover:bg-indigo-500/20 rounded transition">Whoop ML</a>
+                <a href="#projects" className="self-start inline-block px-2 py-1 text-gray-700 dark:text-gray-200 hover:bg-indigo-500/20 rounded transition">Projects</a>
+                <a href="#about" className="self-start inline-block px-2 py-1 text-gray-700 dark:text-gray-200 hover:bg-indigo-500/20 rounded transition">About</a>
+                <a href="#contact" className="self-start inline-block px-2 py-1 text-gray-700 dark:text-gray-200 hover:bg-indigo-500/20 rounded transition">Contact</a>
+                <a href="/Tedra_Resume.pdf" className="self-start inline-block px-2 py-1 text-indigo-500 font-semibold hover:bg-indigo-500/20 rounded transition">Resume</a>
             </div>
         </>
     );

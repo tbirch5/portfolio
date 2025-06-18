@@ -9,7 +9,14 @@ export default function Toast() {
     //if (!hasSeenToast) {
       setShow(true);
       //localStorage.setItem('seenToast', 'true');
+
+      // Auto-dismiss after 5 seconds
+      const timer = setTimeout(() => {
+        setShow(false);
+      }, 5000);
     //}
+
+      return () => clearTimeout(timer); // cleanup
   }, []);
 
   const handleClose = () => setShow(false);
@@ -17,11 +24,11 @@ export default function Toast() {
   if (!show) return null;
 
   return (
-    <div className="fixed top-24 right-6 z-50 max-w-xs px-4 py-3 bg-indigo-600 text-white rounded-lg shadow-lg animate-slide-in-up">
+    <div className="fixed top-24 right-6 z-40 max-w-xs px-4 py-3 bg-indigo-600 text-white rounded-lg shadow-lg animate-slide-in-up transition-opacity duration-500">
       <div className="flex items-start justify-between">
         <div className="flex-1 pr-4">
           <p className="text-sm leading-snug">
-            💡 Tedra built this site with <strong>React</strong>, <strong>Tailwind CSS</strong>, and deployed via <strong>Vercel</strong>.
+            💡 Tedra built this site with <strong>React</strong>, <strong>Tailwind CSS</strong>, and deployed via <strong>Netlify</strong>.
             <br />
             <a
               href="https://linkedin.com/in/tedrab"
