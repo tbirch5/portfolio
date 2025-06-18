@@ -89,24 +89,35 @@ export default function ProjectCarousel() {
             <div className="bg-white dark:bg-gray-900/60 backdrop-blur-md 
                   hover:shadow-lg
                   rounded-2xl p-6 border border-indigo-700 text-gray-800 dark:text-gray-200 h-full">
+            <div className="flex flex-col md:flex-row gap-4 h-full">
+              {/* Left: Image */}
               {project.image && (
                 <img
                   src={project.image}
                   alt={`${project.title} Preview`}
-                  className="rounded-lg border border-white/10 shadow-md hover:shadow-lg transition duration-300 object-cover h-40 w-full"
+                  className="rounded-lg w-full md:w-1/2 object-cover border border-white/10 shadow-md"
                 />
               )}
-              <h3 className="text-lg font-semibold mt-4 mb-2 text-center text-gray-800 dark:text-white">{project.title}</h3>
-              <p className="text-sm text-gray-600 dark:text-white mb-2">{project.desc}</p>
-              <p className="text-md text-gray-500 dark:text-gray-100 mb-4">{project.tech}</p>
-              <div className="flex gap-4">
-                <a href={project.github} target="_blank" rel="noopener noreferrer" className="text-sm px-4 py-1 bg-indigo-100 dark:bg-indigo-500/10 text-indigo-600 dark:text-indigo-300 rounded-md hover:bg-indigo-200 dark:hover:bg-indigo-500/20 transition">GitHub</a>
-                <a href={project.demo} className="text-indigo-400 hover:text-sm px-3 py-1 rounded-md hover:bg-indigo-500/20 transition">Live Demo</a>
+
+              {/* Right: Text */}
+              <div className="flex flex-col justify-between w-full md:w-1/2 text-gray-800 dark:text-gray-200">
+                <div>
+                  <h3 className="text-2xl font-semibold mb-2 text-gray-800 dark:text-white">{project.title}</h3>
+                  <p className="text-sm text-gray-600 dark:text-white mt-4 mb-5">{project.desc}</p>
+                  <p className="inline-block bg-indigo-100/60 dark:bg-indigo-500/10 text-indigo-700 dark:text-indigo-300 text-xs font-semibold px-2 py-1 rounded mb-2">{project.tech}</p>
+
+                  <hr className="my-4 border-t border-gray-300 dark:border-white/10" />
+                </div>
+                <div className="flex gap-2 mt-2">
+                  <a href={project.github} target="_blank" className="text-sm px-3 py-1 bg-indigo-100 dark:bg-indigo-500/10 text-indigo-600 dark:text-indigo-300 rounded-md hover:bg-indigo-200 dark:hover:bg-indigo-500/20 transition">GitHub</a>
+                  <a href={project.demo} className="text-sm px-3 py-1 text-indigo-400 hover:bg-indigo-500/10 rounded-md transition">Live Demo</a>
+                </div>
               </div>
-          </div>
-        </div>
-        ))}
+            </div>
       </div>
+      </div>
+        ))}
+    </div>
 
       {/* Progress Bar Indicator */}
       <div className="mt-6 h-[3px] w-full max-w-xs mx-auto bg-gray-300/30 rounded-full overflow-hidden">
