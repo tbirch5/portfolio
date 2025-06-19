@@ -43,16 +43,16 @@ const toggleMenu = () => {
 
 return (
     <>
-        <nav className="sticky top-0 z-50 flex justify-between items-center px-6 py-4 bg-white/5 dark:bg-black/20 backdrop-blur-sm backdrop-saturate-150 shadow-sm border-b border-white/10 dark:border-white/10">
+        <nav className="fixed top-0 w-full z-50 flex justify-between items-center px-6 py-4 bg-white/5 dark:bg-transparent backdrop-blur-sm backdrop-saturate-150 shadow-sm border-b border-white/10 dark:border-white/10">
             <div className="text-lg font-bold text-indigo-500 dark:text-indigo-300 font-mono flex items-center animate-fade-in-slow">
                 Hello, world!<span className="ml-1 h-5 w-1.5 bg-indigo-500 dark:bg-indigo-300 animate-blink"></span>
             </div>
             {/* Desktop Nav */}
             <div className="hidden md:flex space-x-6 text-sm">
-                <a href="/Whoop" className="relative group text-gray-500 dark:text-gray-100 px-3 py-1 rounded hover:bg-indigo-500/20 transition">Whoop ML</a>
-                <a href="#projects" className="relative group text-gray-500 dark:text-gray-100 px-3 py-1 rounded hover:bg-indigo-500/20 transition">Projects</a>
-                <a href="#about" className="relative group text-gray-500 dark:text-gray-100 px-3 py-1 rounded hover:bg-indigo-500/20 transition">About</a>
-                <a href="#contact" className="relative group text-gray-500 dark:text-gray-100 px-3 py-1 rounded hover:bg-indigo-500/20 transition">Contact</a>
+                <a href="/Whoop" className="relative group text-gray-500 dark:text-white px-3 py-1 rounded hover:bg-indigo-500/20 transition">Whoop ML</a>
+                <a href="#projects" className="relative group text-gray-500 dark:text-white px-3 py-1 rounded hover:bg-indigo-500/20 transition">Projects</a>
+                <a href="#about" className="relative group text-gray-500 dark:text-white px-3 py-1 rounded hover:bg-indigo-500/20 transition">About</a>
+                <a href="#contact" className="relative group text-gray-500 dark:text-white px-3 py-1 rounded hover:bg-indigo-500/20 transition">Contact</a>
                 <a href="/Tedra_Resume.pdf" className="bg-indigo-500 text-white px-3 py-1 rounded hover:bg-indigo-600 transition">Resume</a>
                 <button
                     onClick={toggleTheme}

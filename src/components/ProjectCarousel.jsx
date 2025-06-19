@@ -74,7 +74,7 @@ export default function ProjectCarousel() {
 
   return (
     <section id="projects" className="relative z-10 py-16 px-4 bg-gradient-to-b from-white/5 via-white/0 to-white/5 dark:from-black/5 dark:via-black/0 dark:to-black/5 backdrop-blur-sm">
-      <h2 className="text-3xl font-bold text-center text-gray-700 dark:text-white mb-10">
+      <h2 className="mt-8 text-3xl font-bold text-center text-gray-700 dark:text-white mb-10">
         <span className="bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent dark:text-white">
           Featured Projects
         </span>
