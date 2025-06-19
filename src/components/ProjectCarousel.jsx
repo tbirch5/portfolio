@@ -74,7 +74,7 @@ export default function ProjectCarousel() {
 
   return (
     <section id="projects" className="relative z-10 py-16 px-4 bg-gradient-to-b from-white/5 via-white/0 to-white/5 dark:from-black/5 dark:via-black/0 dark:to-black/5 backdrop-blur-sm">
-      <h2 className="text-3xl font-bold text-center text-gray-700 dark:text-gray-100 mb-10">
+      <h2 className="text-3xl font-bold text-center text-gray-700 dark:text-white mb-10">
         <span className="bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent dark:text-white">
           Featured Projects
         </span>
@@ -83,12 +83,12 @@ export default function ProjectCarousel() {
         {projects.map((project, i) => (
           <div
             key={i}
-            className="snap-start min-w-[90%] md:min-w-[48%] max-w-md flex-shrink-0 rounded-2xl p-[0.5px]
+            className="snap-start min-w-[85%] md:min-w-[42%] max-w-sm flex-shrink-0 rounded-2xl p-[0.5px]
              bg-gradient-to-br from-slate-800 via-slate-900 to-gray-950"
           >
             <div className="bg-white dark:bg-gray-900/60 backdrop-blur-md 
                   hover:shadow-lg
-                  rounded-2xl p-6 border border-indigo-300 text-gray-800 dark:text-gray-200 h-full">
+                  rounded-2xl p-6 border border-indigo-300 text-gray-800 dark:text-white h-full">
             <div className="flex flex-col md:flex-row gap-4 h-full">
               {/* Left: Image */}
               {project.image && (
@@ -100,7 +100,7 @@ export default function ProjectCarousel() {
               )}
 
               {/* Right: Text */}
-              <div className="flex flex-col justify-between w-full md:w-1/2 text-gray-800 dark:text-gray-200">
+              <div className="flex flex-col justify-between w-full md:w-1/2 text-gray-800 dark:text-white">
                 <div>
                   <h3 className="text-2xl font-semibold mb-2 text-gray-800 dark:text-white">{project.title}</h3>
                   <p className="text-sm text-gray-600 dark:text-white mt-4 mb-5">{project.desc}</p>
@@ -110,7 +110,7 @@ export default function ProjectCarousel() {
                 </div>
                 <div className="flex gap-2 mt-2">
                   <a href={project.github} target="_blank" className="text-sm px-3 py-1 bg-indigo-100 dark:bg-indigo-500/10 text-indigo-600 dark:text-indigo-300 rounded-md hover:bg-indigo-200 dark:hover:bg-indigo-500/20 transition">GitHub</a>
-                  <a href={project.demo} className="text-sm px-3 py-1 text-indigo-400 hover:bg-indigo-500/10 rounded-md transition">Live Demo</a>
+                  <a href={project.demo} className="text-sm px-3 py-1 text-indigo-600 hover:bg-indigo-500/10 rounded-md transition">Live Demo</a>
                 </div>
               </div>
             </div>

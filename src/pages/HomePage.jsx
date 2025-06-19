@@ -55,14 +55,14 @@ export default function HomePage() {
         <Navbar />
         <Toast />
 
-        <div className="min-h-screen bg-white dark:bg-[#0f0f12] text-gray-900 dark:text-gray-100 transition-colors duration-300">
+        <div className="min-h-screen bg-white dark:bg-[#0f0f12] text-gray-900 dark:text-white transition-colors duration-300">
             {/* Hero Section */}
             {/* See through section included to allow matrix exposure */}
             <section className="relative z-10 text-center px-6 py-24 min-h-[80vh] flex flex-col justify-center items-center bg-gradient-to-b from-white/5 via-white/0 to-white/5 dark:from-black/5 dark:via-black/0 dark:to-black/5 backdrop-blur-sm">
             {/* Glow background */}
             <div className="absolute -top-10 -left-10 w-[600px] h-[600px] bg-gradient-to-br from-indigo-300 via-purple-200 to-pink-100 dark:from-indigo-800 dark:via-purple-900 dark:to-black rounded-full opacity-30 blur-[120px] -z-10" />
             <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-gradient-to-br from-pink-200 via-indigo-100 to-purple-200 dark:from-purple-900 dark:via-indigo-900 dark:to-black rounded-full opacity-40 blur-[100px] -z-10" />
-            <h1 className="text-5xl font-bold mb-4 leading-tight text-gray-500 dark:text-gray-100">
+            <h1 className="text-5xl font-bold mb-4 leading-tight text-gray-500 dark:text-white">
                 Tedra  
                 <span className="block mt-2 text-indigo-500 dark:text-indigo-300 text-xl md:text-2xl font-mono">
                     <Typewriter
@@ -77,7 +77,7 @@ export default function HomePage() {
                 </span>
 
             </h1>
-            <p className="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto mb-6 dark:text-gray-100 text-center leading-relaxed">
+            <p className="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto mb-6 dark:text-white text-center leading-relaxed">
                 <span className="block">Full-Stack Dev | Systems Thinker</span>
                 <span className="block">React, Django, ML | Building Scalable Solutions for Real-World Problems</span>
             </p>
