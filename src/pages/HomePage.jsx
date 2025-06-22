@@ -102,7 +102,7 @@ export default function HomePage() {
                     <img src="/resume-preview.png" alt="Resume Preview" className="rounded" />
                 </div>
                 </div>
-                 <a href="tbirch955@gmail.com" target="_blank" rel="noopener noreferrer">
+                 <a href="mailto:tbirch955@gmail.com" aria-label="Send Email">
                 <FaRegEnvelope className="text-3xl text-indigo-500 dark:text-white hover:text-gray-600 dark:hover:text-indigo-300" />
                 </a>
             </div>

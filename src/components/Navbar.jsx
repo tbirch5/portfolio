@@ -43,7 +43,7 @@ const toggleMenu = () => {
 
 return (
     <>
-        <nav className="fixed top-0 w-full z-50 flex justify-between items-center px-6 py-4 bg-white/5 dark:bg-transparent backdrop-blur-sm backdrop-saturate-150 shadow-sm border-b border-white/10 dark:border-white/10">
+        <nav className="fixed top-0 w-full z-50 flex justify-between items-center px-6 py-4 bg-white/5 dark:bg-black/10 backdrop-blur-sm backdrop-saturate-150 shadow-sm border-b border-white/10 dark:border-white/10">
             <div className="text-lg font-bold text-indigo-500 dark:text-indigo-300 font-mono flex items-center animate-fade-in-slow">
                 Hello, world!<span className="ml-1 h-5 w-1.5 bg-indigo-500 dark:bg-indigo-300 animate-blink"></span>
             </div>
@@ -107,12 +107,12 @@ return (
         {/* Mobile Nav Dropdown */}
         <div className={`md:hidden overflow-hidden px-6 py-4 space-y-4 bg-white/90 dark:bg-black/30 backdrop-blur-md shadow-md transform transition-all duration-300 ${
             menuOpen ? 'max-h-96 opacity-100 scale-y-100' : 'max-h-0 opacity-0 scale-95'
-        } origin-top flex flex-col gap-2`} style={{ zIndex: 999 }}>
-                <a href="/Whoop" className="self-start inline-block px-2 py-1 text-gray-700 dark:text-gray-200 hover:bg-indigo-500/20 rounded transition">Whoop ML</a>
-                <a href="#projects" className="self-start inline-block px-2 py-1 text-gray-700 dark:text-gray-200 hover:bg-indigo-500/20 rounded transition">Projects</a>
-                <a href="#about" className="self-start inline-block px-2 py-1 text-gray-700 dark:text-gray-200 hover:bg-indigo-500/20 rounded transition">About</a>
-                <a href="#contact" className="self-start inline-block px-2 py-1 text-gray-700 dark:text-gray-200 hover:bg-indigo-500/20 rounded transition">Contact</a>
-                <a href="/Tedra_Resume.pdf" className="self-start inline-block px-2 py-1 text-indigo-500 font-semibold hover:bg-indigo-500/20 rounded transition">Resume</a>
+            } origin-top flex flex-col gap-2`} style={{ zIndex: 999 }}>
+                <a href="/Whoop" className="self-start inline-block px-2 py-1 text-gray-700 dark:text-white hover:bg-indigo-700/20 rounded transition">Whoop ML</a>
+                <a href="#projects" className="self-start inline-block px-2 py-1 text-gray-700 dark:text-white hover:bg-indigo-700/20 rounded transition">Projects</a>
+                <a href="#about" className="self-start inline-block px-2 py-1 text-gray-700 dark:text-white hover:bg-indigo-700/20 rounded transition">About</a>
+                <a href="#contact" className="self-start inline-block px-2 py-1 text-gray-700 dark:text-white hover:bg-indigo-700/20 rounded transition">Contact</a>
+                <a href="/Tedra_Resume.pdf" className="self-start inline-block px-2 py-1 text-white font-semibold hover:bg-white/50 rounded transition">Resume</a>
             </div>
         </>
     );
