@@ -44,7 +44,7 @@ This site reflects my passion for tech, storytelling through software, and solvi
 
 ## 🚀 Deployment
 
-## 🛠️ Built With
+## 🛠️ Build Added Details
 
 - **Frontend:** React.js + Vite + Tailwind CSS
 - **UI/UX:** Custom animations, glassmorphism, typewriter
@@ -68,3 +68,45 @@ frontend/
 ├── vite.config.js
 ├── package.json
 └── README.md
+
+
+
+## 🌗 Dark Mode Support
+
+This site supports dark/light themes with a smooth toggle.
+
+- **Dark mode logic:**  
+  Implemented via Tailwind’s `darkMode: 'class'` setting in `tailwind.config.js`.
+
+- **Initial load script:**  
+  Dark mode is applied immediately on page load by checking:
+  ```js
+  if (
+    localStorage.theme === 'dark' ||
+    (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)
+  ) {
+    document.documentElement.classList.add('dark');
+  } else {
+    document.documentElement.classList.remove('dark');
+  }
+
+
+- Theme toggle button:
+- Implemented in Navbar.jsx using React state and localStorage sync.
+
+- Extras:
+    - Smooth transition applied with:
+
+html {
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+    - All containers use bg-white and dark:bg-black variants for styling consistency.
+
+Heads-up: If you’re troubleshooting and theme toggling doesn’t work:
+
+- Restart your dev server (Ctrl+C then npm run dev or yarn dev)
+
+- Hard refresh your browser (Cmd+Shift+R)
+
+- Make sure the root <html> element has class="dark" when expected
