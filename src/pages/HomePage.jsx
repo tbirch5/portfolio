@@ -91,17 +91,6 @@ export default function HomePage() {
                 <a href="https://github.com/tbirch5" target="_blank" rel="noopener noreferrer">
                 <FaGithub className="text-3xl text-indigo-500 dark:text-white hover:text-gray-600 dark:hover:text-indigo-300 transform hover:scale-110 transition duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-indigo-300 dark:focus:ring-indigo-500" />
                 </a>
-                {/* Resume with preview */}
-                <div className="relative group">
-                <a href="/Tedra_Resume.pdf" target="_blank" rel='noopener noreferrer'>
-                    <HiDocumentText className="text-3xl text-indigo-500 dark:text-white hover:text-gray-600 dark:hover:text-indigo-300 transform hover:scale-110 transition duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-indigo-300 dark:focus:ring-indigo-500" />
-                </a>
-
-                {/* Hover Preview */}
-                <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 w-48 p-2 bg-white/90 text-sm shadow-lg rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-50">
-                    <img src="/resume-preview.png" alt="Resume Preview" className="rounded" />
-                </div>
-                </div>
                  <a href="mailto:tbirch955@gmail.com" aria-label="Send Email">
                 <FaRegEnvelope className="text-3xl text-indigo-500 dark:text-white hover:text-gray-600 dark:hover:text-indigo-300" />
                 </a>

@@ -49,11 +49,10 @@ return (
             </div>
             {/* Desktop Nav */}
             <div className="hidden md:flex space-x-6 text-sm">
-                <a href="/Whoop" className="relative group text-gray-500 dark:text-white px-3 py-1 rounded hover:bg-indigo-500/20 transition">Whoop ML</a>
+                {/* <a href="/Whoop" className="relative group text-gray-500 dark:text-white px-3 py-1 rounded hover:bg-indigo-500/20 transition">Whoop ML</a> */}
                 <a href="#projects" className="relative group text-gray-500 dark:text-white px-3 py-1 rounded hover:bg-indigo-500/20 transition">Projects</a>
-                <a href="#about" className="relative group text-gray-500 dark:text-white px-3 py-1 rounded hover:bg-indigo-500/20 transition">About</a>
-                <a href="#contact" className="relative group text-gray-500 dark:text-white px-3 py-1 rounded hover:bg-indigo-500/20 transition">Contact</a>
-                <a href="/Tedra_Resume.pdf" className="bg-indigo-500 text-white px-3 py-1 rounded hover:bg-indigo-600 transition">Resume</a>
+                {/* <a href="#about" className="relative group text-gray-500 dark:text-white px-3 py-1 rounded hover:bg-indigo-500/20 transition">About</a> */}
+                <a href="mailto:tbirch955@gmail.com" className="bg-indigo-500 text-white px-3 py-1 rounded hover:bg-indigo-600 transition">Contact</a>
                 <button
                     onClick={toggleTheme}
                     className="ml-4 p-2 rounded-full hover:bg-indigo-500/20 transition"
