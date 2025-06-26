@@ -102,17 +102,47 @@ return (
                     </button>
             </div>
         </nav>
+         {/* Mobile Nav Dropdown */}
+        {menuOpen && (
+            <div className="fixed top-0 left-0 w-full h-screen z-[999] bg-white/90 dark:bg-black/80 backdrop-blur-md px-6 py-16 flex flex-col gap-4 items-start">
+                {/* <a href="/Whoop" className="self-start inline-block px-2 py-1 text-gray-700 dark:text-white hover:bg-indigo-700/20 rounded transition">Whoop ML</a> */}
+                <a
+                    href="#projects"
+                    onClick={() => setMenuOpen(false)}
+                    className="text-lg font-semibold text-gray-700 dark:text-white hover:bg-indigo-700/20 rounded transition"
+                >
+                    Projects
+                </a>
+                {/* <a href="#about" className="self-start inline-block px-2 py-1 text-gray-700 dark:text-white hover:bg-indigo-700/20 rounded transition">About</a> */}
+                {/* <a href="#contact" className="self-start inline-block px-2 py-1 text-gray-700 dark:text-white hover:bg-indigo-700/20 rounded transition">Contact</a> */}
+                <a 
+                    href="mailto:tbirch955@gmail.com" 
+                    onClick={() => setMenuOpen(false)}
+                    className="text-lg font-semibold text-gray-700 dark:text-white dark:hover:bg-indigo-700/20 rounded transition"
+                >
+                    Contact
+                </a>
+                <button
+                    onClick={toggleTheme}
+                        className="mr-2 p-2 rounded-full hover:bg-indigo-500/20 transition"
+                        aria-label="Toggle Dark Mode">
+                        {isDark ? (
+                            <SunIcon className="h-5 w-5 text-yellow-400" />
+                        ) : (
+                            <MoonIcon className="h-5 w-5 text-indigo-400" />
+                        )}
+                </button>
+                <button
+                    onClick={toggleMenu}
+                    className="absolute top-4 right-4 p-2 rounded-full hover:bg-indigo-500/20 transition"
+                    aria-label="Close Menu"
+                    >
+                    <XMarkIcon className="h-6 w-6 text-indigo-500 dark:text-indigo-500" />
+                </button>
 
-        {/* Mobile Nav Dropdown */}
-        <div className={`md:hidden overflow-hidden px-6 py-4 space-y-4 bg-white/90 dark:bg-black/30 backdrop-blur-md shadow-md transform transition-all duration-300 ${
-            menuOpen ? 'max-h-96 opacity-100 scale-y-100' : 'max-h-0 opacity-0 scale-95'
-            } origin-top flex flex-col gap-2`} style={{ zIndex: 999 }}>
-                <a href="/Whoop" className="self-start inline-block px-2 py-1 text-gray-700 dark:text-white hover:bg-indigo-700/20 rounded transition">Whoop ML</a>
-                <a href="#projects" className="self-start inline-block px-2 py-1 text-gray-700 dark:text-white hover:bg-indigo-700/20 rounded transition">Projects</a>
-                <a href="#about" className="self-start inline-block px-2 py-1 text-gray-700 dark:text-white hover:bg-indigo-700/20 rounded transition">About</a>
-                <a href="#contact" className="self-start inline-block px-2 py-1 text-gray-700 dark:text-white hover:bg-indigo-700/20 rounded transition">Contact</a>
-                <a href="/Tedra_Resume.pdf" className="self-start inline-block px-2 py-1 text-white font-semibold hover:bg-white/50 rounded transition">Resume</a>
             </div>
+        )}                        
+       
         </>
     );
 }

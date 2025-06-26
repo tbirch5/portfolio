@@ -1,4 +1,5 @@
 import { useRef, useState, useEffect } from "react";
+import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 
 
 export default function ProjectCarousel() {
@@ -72,6 +73,30 @@ export default function ProjectCarousel() {
     return () => container.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const scrollToIndex = (index) => {
+    const container = carouselRef.current;
+    const children = container?.querySelectorAll("div.snap-start");
+    if (children?.[index]) {
+      children[index].scrollIntoView({ behavior: "smooth", inline: "start" });
+    }
+  };
+
+  const handlePrev = () => {
+    if (activeIndex > 0) {
+      const newIndex = activeIndex - 1;
+      scrollToIndex(newIndex);
+      setActiveIndex(newIndex);
+    }
+  };
+
+  const handleNext = () => {
+    if (activeIndex < projects.length - 1) {
+      const newIndex = activeIndex + 1;
+      scrollToIndex(newIndex);
+      setActiveIndex(newIndex);
+    }
+  };
+
   return (
     <section id="projects" className="relative z-10 py-16 px-4 bg-gradient-to-b from-white/5 via-white/0 to-white/5 dark:from-black/5 dark:via-black/0 dark:to-black/5 backdrop-blur-sm">
       <h2 className="mt-8 text-3xl font-bold text-center text-gray-700 dark:text-white mb-10">
@@ -79,6 +104,16 @@ export default function ProjectCarousel() {
           Featured Projects
         </span>
       </h2>
+
+      <div className="flex items-center gap-2 justify-center mb-4">
+        <button onClick={handlePrev} aria-label="Previous Project" tabIndex={0} className="p-2 rounded-full hover:bg-indigo-500/20 transition">
+          <FaArrowLeft className="text-indigo-500 dark:text-indigo-900" />
+        </button>
+        <button onClick={handleNext} aria-label="Next Project" tabIndex={0} className="p-2 rounded-full hover:bg-indigo-500/20 transition">
+          <FaArrowRight className="text-indigo-500 dark:text-indigo-900" />
+        </button>
+      </div>
+
       <div ref={carouselRef} className="overflow-x-auto flex gap-6 px-6 pb-4 snap-x snap-mandatory scrollbar-hide scroll-smooth">
         {projects.map((project, i) => (
           <div
